@@ -1,5 +1,9 @@
 Tool built using TypeScript and Puppeteer to scrape data from films in a Letterboxd lists. For information on how to use this package.
 
+Installation
+
+    - Run "npm install letterboxd-list-scraper"
+
 Quick Start:
 
 1. Add "import processFilmsInList from 'letterboxd-list-scraper'" to top of file
