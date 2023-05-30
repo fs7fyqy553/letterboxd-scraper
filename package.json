@@ -1,0 +1,21 @@
+{
+  "name": "letterboxd-scraper",
+  "version": "1.0.0",
+  "description": "Scraper of letterboxd.com for film data",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "James Graça-Jones <jamesgracajones@gmail.com> (https://github.com/JamesGJ5)",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "node-html-parser": "^6.1.5",
+    "puppeteer": "^19.8.5",
+    "puppeteer-autoscroll-down": "^1.1.2"
+  }
+}
