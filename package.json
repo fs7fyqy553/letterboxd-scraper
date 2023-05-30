@@ -1,6 +1,6 @@
 {
   "name": "letterboxd-list-scraper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Scraper of letterboxd.com for film data",
   "main": "dist/index.js",
   "type": "module",
