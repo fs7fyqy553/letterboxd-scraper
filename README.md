@@ -1,0 +1,1 @@
+Tool built using TypeScript and puppeteer to scrape data from films in a Letterboxd list in grid view. For information on how to use this package, please see https://www.npmjs.com/package/letterboxd-list-scraper
