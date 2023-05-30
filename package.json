@@ -1,5 +1,5 @@
 {
-  "name": "letterboxd-scraper",
+  "name": "letterboxd-list-scraper",
   "version": "1.0.0",
   "description": "Scraper of letterboxd.com for film data",
   "main": "dist/index.js",
