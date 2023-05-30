@@ -1,4 +1,3 @@
-/* eslint-disable */
 import puppeteer from "puppeteer";
 import { parse } from "node-html-parser";
 import { scrollPageToBottom } from "puppeteer-autoscroll-down";
@@ -101,7 +100,6 @@ function getLetterboxdURL(path) {
 async function processFilmAnchorNodeList(nodeList, filmPuppeteerPage, processor) {
     for (let i = 0; i < nodeList.length; i += 1) {
         const filmAnchorNode = nodeList[i];
-        // eslint-disable-next-line no-await-in-loop
         await processFilmAnchorNode(filmAnchorNode, filmPuppeteerPage, processor);
     }
 }
@@ -141,7 +139,6 @@ async function getPuppeteerPage(browser) {
 async function usePuppeteerPages(listPuppeteerPage, filmPuppeteerPage, firstListPageURL, processor) {
     let listPageURL = firstListPageURL;
     while (listPageURL !== null) {
-        // eslint-disable-next-line no-await-in-loop
         listPageURL = await processListPageAndGetNextURL(listPageURL, listPuppeteerPage, filmPuppeteerPage, processor);
     }
 }
