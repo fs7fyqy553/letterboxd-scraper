@@ -6,7 +6,9 @@ Installation
 
 Quick Start:
 
-1. Add "import processFilmsInList from 'letterboxd-list-scraper'" to top of file
+1. Add "import processFilmsInList from 'letterboxd-list-scraper'" to top of file:
+
+    - Note: for now, only ES imports are enabled
 
 2. When using the function processFilmsInList:
 
