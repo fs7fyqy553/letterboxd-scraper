@@ -1,24 +1,37 @@
 Tool built using TypeScript and Puppeteer to scrape data from films in a Letterboxd lists. Can extract data for each film in a Letterboxd list at a rate of ~1s per film.
 
-Installation
+Letterboxd lists and film pages load data dynamically, hence the use of Puppeteer. Letterboxd lists require scrolling in order to load all list content, which the package puppeteer-autoscroll-down is used for https://www.npmjs.com/package/puppeteer-autoscroll-down.
 
-    - Run "npm install letterboxd-list-scraper"
+Installation:
+
+    npm install letterboxd-list-scraper
 
 Quick Start:
 
-1. Add "import processFilmsInList from 'letterboxd-list-scraper'" to top of file:
+1. Import processFilmsInList from the package. For now, only ES6+ imports are enabled:
 
-    - Note: for now, only ES imports are enabled
+    ```
+    import processFilmsInList from 'letterboxd-list-scraper'
+    ```
 
-2. When using the function processFilmsInList:
+2. When using the function processFilmsInList, make sure firstListPageURL links to a Letterboxd list page in grid view.
 
-    1. Pass as the first argument the URL of the first page in the Letterboxd list in grid view.
+    ```
+    processFilmsInList(
+        firstListPageURL: string,
+        processor: Function
+    );
+    ```
 
-    2. Pass as the second argument the function that is supposed to process the film object extracted for a given Letterboxd film page, ensuring the list is in grid view:
+3. Format of the film object passed to processor for each film:
 
-        - Film object contains the following keys: filmTitle (string), releaseYearString, directorNameArray, averageRatingString, filmPosterURL (string) and filmBackdropImageURL (string)
-
-Details:
-
-- Letterboxd lists and film pages load data dynamically, hence the use of Puppeteer.
-- Letterboxd lists require scrolling in order to load all list content, which the package puppeteer-autoscroll-down is used for (https://www.npmjs.com/package/puppeteer-autoscroll-down)
+    ```
+    {
+        filmTitle: string,
+        releaseYearString: string,
+        directorNameArray: string[],
+        averageRatingString: string,
+        filmPosterURL: string,
+        filmBackdropImageURL: string,
+    }
+    ```
