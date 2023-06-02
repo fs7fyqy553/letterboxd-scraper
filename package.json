@@ -17,5 +17,9 @@
     "node-html-parser": "^6.1.5",
     "puppeteer": "^19.8.5",
     "puppeteer-autoscroll-down": "^1.1.2"
-  }
+  },
+  "keywords": [
+    "letterboxd",
+    "scraper"
+  ]
 }
